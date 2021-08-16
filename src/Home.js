@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div
       className="home vh-100 text-white"
-      style={{backgroundColor: "#311b92"}}>
+      style={{backgroundColor: "#eef"}} >
         <HomeTitle />
         <HomeMenu />
         <HomeFooter />
@@ -12,7 +12,11 @@ export default function Home() {
 
 function HomeTitle() {
   return (
-    <h1 className="p-5 text-center">Ludo</h1>
+    <h1
+      className="p-5 text-center"
+      style={{backgroundColor: "#311b92"}} >
+        Ludo Things
+    </h1>
   )
 }
 
@@ -23,12 +27,13 @@ function HomeMenu() {
     "Team vs Team (Coming Soon)"
   ]
   return (
-    <div className="container">
+    <div className="container my-5">
       {gameModes.map((val, ind) => (
         <div className="row justify-content-center">
           <button
             id={ind}
-            className="btn col-6 text-white fs-4 border border-light border-2 rounded-pill m-2" >
+            className="btn col-md-6 text-white fs-4 rounded-pill my-2"
+            style={{backgroundColor: "#311b92"}} >
               {val}
           </button>
         </div>
